@@ -1,0 +1,41 @@
+[Reset, Revert 되돌리기]
+- 특정 상태로 다시 되돌아 가는 방법
+
+[reset] ... 배포한 후 잘 사용하지 않는다.
+
+(명령어)
+git reset 옵션 되돌릴 커밋ID
+
+(옵션)
+--soft : 해당 커밋상태로 돌아가며 수정사항이 stage에 반영된다.
+--mixed : 해당 커밋상태로 돌아가며 수정사항이 workingtree에 반영되지만, stage에는 반영되지 않는다.
+--hard : 해당 커밋상태로 돌아가며 수정사항이 workingtree에도,  stage에도 반영되지 않는다.
+
+(커밋ID)
+7자리만 작성하면된다. (git log --oneline을 통해 간편하게 볼 수 있다.)
+(커밋ID 대신 HEAD 사용)
+- HEAD를 기준으로 상대적으로 이동할 수 있다.
+git reset 옵션 head~ : head 기준 뒤로 한칸 되돌린다.
+git reset 옵션 head~~ : head 기준 뒤로 두칸 되돌린다.
+git reset 옵션 head^ : head 기준 뒤로 한칸 되돌린다.
+git reset 옵션 head^^ : head 기준 뒤로 두칸 되돌린다.
+
+---
+
+[revert] ... 배포한 후 잘 사용한다.
+
+(명령어)
+git revert 되돌리기 (전)커밋ID
+
+(커밋ID)
+7자리만 작성하면된다. (git log --oneline을 통해 간편하게 볼 수 있다.)
+(커밋ID 대신 HEAD 사용)
+- HEAD를 기준으로 상대적으로 이동할 수 있다.
+git revert head~ : head 기준 뒤로 한칸 되돌린다.
+git revert head~~ : head 기준 뒤로 두칸 되돌린다.
+git revert head^ : head 기준 뒤로 한칸 되돌린다.
+git revert head^^ : head 기준 뒤로 두칸 되돌린다.
+
+(단축 명령어) ... 가장 최근 커밋부터 차례로 취소해 나간다.
+git revert 커밋ID1.. 커밋ID2
+- ID1부터 ID2까지 차례로 취소한다.

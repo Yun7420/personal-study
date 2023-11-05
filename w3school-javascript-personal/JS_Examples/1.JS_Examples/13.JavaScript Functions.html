@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions</title>
+  </head>
+  <body>
+    <!-- A simple function -->
+    <!-- 버튼을 클릭하면 함수가 호출됩니다. -->
+    <p id="demo"></p>
+    <button onclick="myFunction()">Click Me</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello Javascript";
+      }
+    </script>
+
+    <!-- A function with an argument -->
+    <!-- 인수를 사용하여 함수를 호출하려면 버튼을 클릭합니다 -->
+    <p id="demo"></p>
+    <button onclick="myFunction('Harry Potter', 'Wizard')">Click Me</button>
+
+    <script>
+      function myFunction(name, job) {
+        document.getElementById("demo").innerHTML =
+          "Welcome " + name + ", the " + job + ".";
+      }
+    </script>
+
+    <!-- A function with an argument 2 -->
+    <!-- 버튼 중 하나를 클릭하면 함수가 호출됩니다. 함수에 전달되는 인수가 표시됩니다 -->
+    <p id="demo"></p>
+    <button onclick="myFunction('Good Morning')">In the Morning</button>
+    <button onclick="myFunction('Good Evening')">In the Evening</button>
+
+    <script>
+      function myFunction(txt) {
+        document.getElementById("demo").innerHTML = txt;
+      }
+    </script>
+
+    <!-- A function that returns a value -->
+    <!-- 계산을 수행하고 결과를 반환하는 함수 호출 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = myFunction(4, 3);
+      document.getElementById("demo").innerHTML = x;
+
+      function myFunction(a, b) {
+        return a * b;
+      }
+    </script>
+
+    <!-- A function that converts Fahrenheit to Celsius -->
+    <!-- 화씨에서 섭씨로 변환하는 함수 호출(호출) -->
+    <p id="demo"></p>
+
+    <script>
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+
+      let value = toCelsius(77);
+      document.getElementById("demo").innerHTML = value;
+    </script>
+
+    <!-- A function call without() -->
+    <!-- () 없이 함수에 액세스하면 함수가 반환되고 함수 결과가 반환되지 않습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+
+      let value = toCelsius;
+      document.getElementById("demo").innerHTML = value;
+    </script>
+  </body>
+</html>

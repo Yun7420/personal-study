@@ -1,0 +1,24 @@
+[원격저장소 연결]
+git remote add 원격저장소이름(origin) 원격저장소주소(github주소) : 해당 주소의 원격저장소를 원격저장소이름(origin)으로 연결한다.
+
+[원격저장소 정보확인]
+git remote : 연결시킨 원격저장소 이름(origin) 확인
+git remote -v : 연결시킨 원격저장소 이름(origin)과 주소(github주소)
+git remote show 원격저장소이름(origin) : 원격저장소의 상세 내용 확인(branch 등...)
+
+[원격저장소 복제 및 확인] 
+git clone 원격저장소주소 : 원격저장소의 commit내용, 수정사항 등 모든 과정을 복제.
+git log : clone한 원격저장소의 커밋내용, 수정사항 등을 확인. (q : 해당 명령어에서 빠저 나온다.)
+※ 각각의 커밋내용은 고유의 Id값을 가지고 있으며, Id값은 중복되지 않는다.
+
+[원격저장소의 내용 다운로드]
+git pull : 원격저장소의 최신 커밋상태를 로컬 저장소로 다운로드
+
+git fetch : 해당주소의 원격저장소 커밋 내용(만)을 복사하여 내려받기 (임시저장)
+git merge 원격저장소이름 브랜치이름 : 내려받은 커밋을 로컬저장소에 적용 (git fetch 사용시)
+
+[원격저장소 이름 삭제]
+git remote rm 원격저장소이름(origin) : 원격저장소의이름(origin) 삭제
+
+[참고]
+open bash here에서 복사 붙여넣기 : shift + insert

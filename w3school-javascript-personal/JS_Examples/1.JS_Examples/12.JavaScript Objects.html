@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Objects</title>
+  </head>
+  <body>
+    <!-- Create a JavaScript variable -->
+    <!-- JavaScript 변수 만들기 -->
+    <p id="demo"></p>
+
+    <script>
+      let car = "Fiat";
+
+      document.getElementById("demo").innerHTML = car;
+    </script>
+
+    <!-- Create a JavaScript object -->
+    <!-- 자바스크립트 객체 만들기 -->
+    <p id="demo"></p>
+
+    <script>
+      const car = { type: "Fiat", model: "500", color: "white" };
+
+      document.getElementById("demo").innerHTML = "The car type is " + car.type;
+    </script>
+
+    <!-- Create a person object (single line) -->
+    <!-- 사용자 객체 만들기(단일행) -->
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      document.getElementById("demo").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    <!-- Create a person object (multiple lines) -->
+    <!-- 사용자 객체 만들기(여러 줄) -->
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      document.getElementById("demo").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    <!-- Access object properties using .property -->
+    <!-- property를 사용하여 개체 속성에 액세스합니다 -->
+    <!-- 객체 속성에 액세스하는 방법에는 두 가지가 있습니다. -->
+    <!-- person.property 또는 person["property"]를 사용할 수 있습니다. -->
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+
+      document.getElementById("demo").innerHTML =
+        person.firstName + " " + person.lastName;
+    </script>
+
+    <!-- Access object properties using [property] -->
+    <!-- [property]를 사용하여 개체 속성 액세스 -->
+    <!-- 객체 속성에 액세스하는 방법에는 두 가지가 있습니다. -->
+    <!-- person.property 또는 person["property"]를 사용할 수 있습니다. -->
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+
+      document.getElementById("demo").innerHTML =
+        person["firstName"] + " " + person["lastName"];
+    </script>
+
+    <!-- Access a function property as a method -->
+    <!-- 메서드로 함수 속성에 액세스 -->
+    <!-- 객체 메서드는 속성 값으로 저장되는 함수 정의입니다. -->
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+
+    <!-- Access a function property as a property -->
+    <!-- 함수 속성을 속성으로 액세스 -->
+    <!-- () 없이 개체 메서드에 액세스하면 함수 정의가 반환됩니다: -->
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      document.getElementById("demo").innerHTML = person.fullName;
+    </script>
+  </body>
+</html>

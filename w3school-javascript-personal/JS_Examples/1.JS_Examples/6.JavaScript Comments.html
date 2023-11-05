@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Comments</title>
+  </head>
+  <body>
+    <!-- Single line comments -->
+    <!-- 한 줄 주석 -->
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+
+    <script>
+      // Change heading
+      document.getElementById("myH").innerHTML = "JavaScript Comments";
+      // Change paragraph
+      document.getElementById("myP").innerHTML = "My first paragraph.";
+    </script>
+
+    <!-- Single line comments at the end of a line -->
+    <!-- 줄 끝에 있는 한 줄 주석 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 5; // Declare x, give it the value of 5
+      let y = x + 2; // Declare y, give it the value of x + 2
+
+      document.getElementById("demo").innerHTML = y;
+    </script>
+
+    <!-- Multiple lines comments -->
+    <!-- 여러 줄 주석 -->
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+
+    <script>
+      /*
+            The code below will change
+            the heading with id = "myH"
+            and the paragraph with id = "myP"
+        */
+      document.getElementById("myH").innerHTML = "JavaScript Comments";
+      document.getElementById("myP").innerHTML = "My first paragraph.";
+    </script>
+
+    <!-- Single line comment to prevent execution -->
+    <!-- 실행 방지를 위한 한 줄 설명 -->
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+
+    <script>
+      // document.getElementById("myH").innerHTML = "My First Page";
+      document.getElementById("myP").innerHTML = "My first paragraph.";
+    </script>
+
+    <!-- Multiple lines comments to prevent execution -->
+    <!-- 실행 방지를 위한 여러 줄 주석 -->
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+
+    <script>
+      /*
+            document.getElementById("myH").innerHTML = "Welcome to my Homepage";
+            document.getElementById("myP").innerHTML = "This is my first paragraph.";
+        */
+      document.getElementById("myP").innerHTML =
+        "The comment-block is not executed.";
+    </script>
+  </body>
+</html>

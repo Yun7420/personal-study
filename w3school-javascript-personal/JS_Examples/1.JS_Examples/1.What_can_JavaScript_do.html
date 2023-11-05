@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What can JavaScript do?</title>
+  </head>
+  <body>
+    <!-- JavaScript can change HTML content -->
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button
+      onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'"
+    >
+      Click Me
+    </button>
+
+    <!-- JavaScript can change HTML attributes -->
+    <button
+      onclick="document.getElementById('myImage').src = 'https://www.w3schools.com/js/pic_bulbon.gif'"
+    >
+      Turn on the light
+    </button>
+    <img
+      id="myImage"
+      src="https://www.w3schools.com/js/pic_bulboff.gif"
+      alt="bulboff"
+    />
+    <button
+      onclick="document.getElementById('myImage').src = 'https://www.w3schools.com/js/pic_bulboff.gif'"
+    >
+      Turn off the light
+    </button>
+
+    <!-- JavaScript can change CSS style -->
+    <p id="demo">JavaScript can change the style of an HTML element.</p>
+    <button onclick="document.getElementById('demo').style.color = 'red'">
+      Click Me
+    </button>
+
+    <!-- JavaScript can hide HTML elements -->
+    <p id="demo">JavaScript can hide HTML elements.</p>
+    <button onclick="document.getElementById('demo').style.display = 'none'">
+      Click Me
+    </button>
+
+    <!-- JavaScript can show hidden HTML elements -->
+    <p id="demo" style="display: none">Hello JavaScript!</p>
+    <button onclick="document.getElementById('demo').style.display = 'block'">
+      Click Me
+    </button>
+  </body>
+</html>

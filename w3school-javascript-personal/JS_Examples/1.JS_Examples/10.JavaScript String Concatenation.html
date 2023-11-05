@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript String Concatenation</title>
+  </head>
+  <body>
+    <!-- Adding two strings together using the concatenating (+) operator -->
+    <!-- 연결 연산자(+)를 사용하여 두 문자열을 함께 추가 -->
+    <p id="demo"></p>
+
+    <script>
+      var txt1 = "What a very";
+      var txt2 = "nice day";
+
+      document.getElementById("demo").innerHTML = txt1 + txt2;
+    </script>
+
+    <!-- Adding two strings together with a space in the first string -->
+    <!-- 첫번째 문자열에 공백이 있는 두 문자열을 함께 추가 -->
+    <p id="demo"></p>
+
+    <script>
+      var txt1 = "What a very ";
+      var txt2 = "nice day";
+
+      document.getElementById("demo").innerHTML = txt1 + txt2;
+    </script>
+
+    <!-- Adding two strings together with a space in between -->
+    <!-- 두 문자열을 사이에 두고 함께 추가하는 것 -->
+    <p id="demo"></p>
+
+    <script>
+      var txt1 = "What a very";
+      var txt2 = "nice day";
+
+      document.getElementById("demo").innerHTML = txt1 + " " + txt2;
+    </script>
+
+    <!-- Adding two strings together using using the += operator -->
+    <!-- += 연산자를 사용하여 두 개의 문자열을 함께 추가 -->
+    <p id="demo"></p>
+
+    <script>
+      var txt1 = "What a very ";
+      txt1 += "nice day";
+
+      document.getElementById("demo").innerHTML = txt1;
+    </script>
+
+    <!-- Adding strings and numbers -->
+    <!-- 문자열 및 숫자 추가(숫자와 문자열을 추가하면 문자열이 반환됩니다.) -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 5 + 5;
+      let y = "5" + 5;
+      let z = "Hello" + 5;
+      document.getElementById("demo").innerHTML = x + "<br>" + y + "<br>" + z;
+    </script>
+  </body>
+</html>

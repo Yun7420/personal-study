@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Data Types</title>
+  </head>
+  <body>
+    <!-- Declare (create) strings -->
+    <!-- 문자열을 선언(생성) -->
+    <!-- 문자열이 문자열을 둘러싼 따옴표와 일치하지 않는 한 문자열 내부에서 따옴표를 사용할 수 있습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let answer1 = "It's alright";
+      let answer2 = "He is called 'Johnny'";
+      let answer3 = 'He is called "Johnny"';
+
+      document.getElementById("demo").innerHTML =
+        answer1 + "<br>" + answer2 + "<br>" + answer3;
+    </script>
+
+    <!-- Declare (create) numbers -->
+    <!-- 숫자열을 선언(생성) -->
+    <!-- 숫자는 소수점을 사용하거나 사용하지 않고 쓸 수 있다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x1 = 34.0;
+      let x2 = 34;
+      let x3 = 3.14;
+
+      document.getElementById("demo").innerHTML =
+        x1 + "<br>" + x2 + "<br>" + x3;
+    </script>
+
+    <!-- Declare (create) an array -->
+    <!-- 배열을 선언(작성)합니다 -->
+    <!-- array 인덱스는 제로 기반이며, 이는 첫 번째 항목이 [0]임을 의미한다. -->
+    <p id="demo"></p>
+
+    <script>
+      const cars = ["Saab", "Volvo", "BMW"];
+
+      document.getElementById("demo").innerHTML = cars[0];
+    </script>
+
+    <!-- Declare (create) an object -->
+    <!-- 개체를 선언(작성) -->
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      document.getElementById("demo").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    <!-- Find the type of a variable -->
+    <!-- 변수 유형 찾기 -->
+    <!-- 연산자 유형은 변수 또는 식의 유형을 반환합니다 -->
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML =
+        typeof "" +
+        "<br>" +
+        typeof "John" +
+        "<br>" +
+        typeof "John Doe" +
+        "<br>" +
+        typeof 0 +
+        "<br>" +
+        typeof 314 +
+        "<br>" +
+        typeof 3.14 +
+        "<br>" +
+        typeof 3.14;
+    </script>
+    <!-- Adding two numbers and a string -->
+    <!-- 숫자 2개와 문자열 추가 -->
+    <!-- 자바스크립트는 왼쪽에서 오른쪽으로 표현을 평가한다. 서열이 다르면 결과가 달라질 수 있다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 16 + 4 + "Volvo";
+
+      document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <!-- Adding a string and two numbers -->
+    <!-- 문자열과 숫자 두 개 추가 -->
+    <!-- 자바스크립트는 왼쪽에서 오른쪽으로 표현을 평가한다. 서열이 다르면 결과가 달라질 수 있다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "volve" + 16 + 4;
+
+      document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <!-- An undefined variable -->
+    <!-- 정의되지 않은 변수 -->
+    <!-- 값이 없는 변수의 값(및 데이터 유형)이 정의되지 않았습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let car;
+
+      document.getElementById("demo").innerHTML = car + "<br>" + typeof car;
+    </script>
+
+    <!-- An empty variable -->
+    <!-- 빈 변수 -->
+    <!-- 빈 문자열에는 법적 값과 유형이 모두 있습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let car = "";
+
+      document.getElementById("demo").innerHTML =
+        "The value is : " + car + "<br>" + "The type is : " + typeof car;
+    </script>
+  </body>
+</html>

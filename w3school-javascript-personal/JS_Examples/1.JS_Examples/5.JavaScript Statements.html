@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Statements</title>
+  </head>
+  <body>
+    <!-- JavaScript statements are commands to the browser -->
+    <!-- HTML에서 자바스크립트 문은 브라우저에 의해 실행된다. -->
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "Hello Dolly.";
+    </script>
+
+    <!-- JavaScript code is a sequence of statements -->
+    <!-- 자바스크립트 프로그램은 컴퓨터가 실행할 문장 목록이다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x, y, z; // statement 1
+      x = 5; // statement 2
+      y = 6; // statement 3
+      z = x + y; // statement 4
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- JavaScript statements are separated with semicolon -->
+    <!-- 자바스크립트 문은 세미콜론으로 구분된다. -->
+    <p id="demo"></p>
+
+    <script>
+      let a, b, c;
+      a = 5;
+      b = 6;
+      c = a + b;
+
+      document.getElementById("demo").innerHTML = c;
+    </script>
+
+    <!-- Multiple statement on one line is allowed -->
+    <!-- 한 줄에 여러 개의 문장이 허용됩니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let a, b, c;
+      a = 5;
+      b = 6;
+      c = a + b;
+      document.getElementById("demo").innerHTML = c;
+    </script>
+
+    <!-- JavaScript statements can be grouped together in code blocks -->
+    <!-- 자바스크립트 문을 코드 블록으로 함께 그룹화할 수 있습니다 -->
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button onclick="myFunction()">Click Me</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo1").innerHTML = "Hello Dolly!";
+        document.getElementById("demo2").innerHTML = "How are you?";
+      }
+    </script>
+
+    <!-- You can break a code line after an operator or a comma. -->
+    <!-- 코드 라인을 끊기에 가장 좋은 위치는 연산자 또는 쉼표 다음입니다. -->
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "Hello Dolly!";
+    </script>
+  </body>
+</html>

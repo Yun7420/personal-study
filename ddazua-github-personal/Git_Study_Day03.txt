@@ -1,0 +1,60 @@
+작업 공간 - Stage - Repository
+
+------------------------------------------------- 1000line...
+[작업공간 - stage]
+
+[Stage에 올리기 (untracked 파일 혹은 modified 파일)]
+
+GUI 방식
+플러스(+) 아이콘 클릭
+
+CLI 방식
+git add 파일명
+
+만약) 모든 파일을 Stage에 올리고 싶다면
+git add * 을 입력해준다.
+
+
+[Stage에 내리기]
+
+GUI 방식
+마이너스(-) 아이콘 클릭
+
+CLI 방식
+git rm --cached 파일명
+참고 : rm 이란 (remove)
+
+만약) 모든 파일을 Stage에 내리고 싶다면
+git rm --cached * 을 입력해준다.
+
+------------------------------------------------- 1000line...
+[Stage - Repository]
+
+commit : Stage 상태의 파일들을 영구적으로 저장한다.
+
+commit을 위해서는 commit message를 남겨야한다. (권장사항)
+단) untracked 혹은 modified 파일들은 영구적으로 저장하지 못한다.
+
+[commit 방법]
+
+GUI 방식
+commit message 입력 - commit 버튼 클릭 - commit 완료
+
+CLI 방식
+git commit 입력 - vi 에디터 (커밋 메세지 입력 편집기) - esc i - commit message 삽입 - esc : wq - commit 완료
+단) #은 주석을 의미하므로 해석하지 않는다.
+
+[commit 단축옵션]
+vi 에디터를 열지 않고도 commit message 와 commit 을 할 수 있게 만드는 방법입니다.
+git commit -m 'commit message'
+
+만약) add되지 않은(unstage 상태의 파일)을 commit하고 싶다면
+git commit -a 을 입력하면된다.
+
+git commit -m 'commit message' 와 git commit -a를 같이 사용할 수도 있는데
+git commit -am 'commit message' 를 입력해주면 된다.
+
+※ 최초 add로 올라가고 수정사항이 있는 파일들은 commit 단축옵션을 사용할 수 있지만,
+최초로 생성된 파일 (untracked 상태) add로 한번도 올라가지 않은 파일들은 단축옵션으로 commit을 할 수 없다.
+
+

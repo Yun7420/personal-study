@@ -1,0 +1,21 @@
+git (로컬 저장소) // github (원격저장소)
+
+
+github(원격 저장소) 사용방법
+
+[깃(로컬 저장소)와 깃허브(원격 저장소)를 연결]
+1. 원격저장소 만들기 >>> 깃허브 로그인 > repository 생성
+
+2. 내가 만든 깃 (로컬 저장소) 와 깃허브(원격 저장소) 연결
+git branch -M main : branch를 Master에서 main으로 변경
+
+git remote add origin github주소 : git(로컬 저장소)와 연결된 github(원격 저장소)를 설정
+(참고) 원격저장소 주소가 너무 길기 때문에 orgin이라는 이름을 미리 설정해준다. (꼭) origin이 아니여도 사용자가 원하는 이름으로 설정 가능!!
+
+git remote : 해당 repository와 연결된 깃허브(원격 저장소)를 알려준다.
+
+git push origin main (git push 설정된 이름 브랜치이름) >>> origin이라는 설정된 이름을 가진 원격저장소의 main이라는 branch에 업로드 하겠습니다.
+ex) 설정된 이름 : my, 브랜치이름 : firstman >>> git push my firstman
+
+git push -u origin main
+앞으로 origin이라는 원격저장소의 main에 업로드하겠다고 미리 설정해준다. 이후) git push만 입력해도 업로드가 가능하다.

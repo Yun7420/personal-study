@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Variables</title>
+  </head>
+  <body>
+    <!-- JavaScript variables -->
+    <!-- 이 예제에서 x, y 및 z는 변수입니다. -->
+    <p id="demo"></p>
+
+    <script>
+      var x = 5;
+      var y = 6;
+      var z = x + y;
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- JavaScript variables as algebra -->
+    <!-- 이 예제에서 price1, price2 및 total은 변수입니다. -->
+    <p id="demo"></p>
+
+    <script>
+      const price1 = 5;
+      const price2 = 6;
+      let total = price1 + price2;
+
+      document.getElementById("demo").innerHTML = total;
+    </script>
+
+    <!-- JavaScript numbers and strings -->
+    <!-- 문자열은 따옴표로 작성됩니다. -->
+    <!-- 숫자는 따옴표 없이 쓰여진다. -->
+    <p id="demo"></p>
+
+    <script>
+      const pi = 3.14;
+      let person = "John Doe";
+      let answer = "Yes I am!";
+
+      document.getElementById("demo").innerHTML =
+        pi + "<br>" + person + "<br>" + answer;
+    </script>
+
+    <!-- JavaScript var keyword -->
+    <!-- 변수 생성, 값 할당 및 표시 -->
+    <p id="demo"></p>
+
+    <script>
+      let car = "Volvo";
+      document.getElementById("demo").innerHTML = car;
+    </script>
+
+    <!-- Declaring many variables in one statement -->
+    <!-- 하나의 문장에서 여러 변수를 선언할 수 있습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let person = "John Doe",
+        carName = "Volvo",
+        price = 200;
+
+      document.getElementById("demo").innerHTML = carName;
+    </script>
+
+    <!-- Declaring many variables multiline -->
+    <!-- 하나의 문장에서 여러 변수를 선언할 수 있습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let person = "John Doe",
+        carName = "Volvo",
+        price = 200;
+
+      document.getElementById("demo").innerHTML = carName;
+    </script>
+
+    <!-- A variable without a value returns the value undefined -->
+    <!-- 값이 없는 변수의 값은 다음과 같습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let carName;
+      document.getElementById("demo").innerHTML = carName;
+    </script>
+
+    <!-- Re-declaring a variable will not destory the value -->
+    <!-- 자바스크립트 변수를 다시 선언해도 값이 손실되지 않습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      var carName = "Volvo";
+      var carName;
+
+      document.getElementById("demo").innerHTML = carName;
+    </script>
+
+    <!-- Adding JavaScript numbers -->
+    <!-- 5 + 2 + 3을 더한 결과는 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 5 + 2 + 3;
+      document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <!-- Adding JavaScript strings -->
+    <!-- "존" + "" + "도"를 더하면 다음과 같다: -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "John" + " " + "Doe";
+      document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <!-- Adding strings and numbers -->
+    <!-- "5" + 2 + 3을 더하면 다음과 같다: -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "5" + 2 + 3;
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>
