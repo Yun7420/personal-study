@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Strings</title>
+  </head>
+  <body>
+    <!-- Strings can be written with single or double quotes. -->
+    <!-- 문자열은 작은따옴표나 큰따옴표로 쓸 수 있습니다. -->
+    <p id="demo"></p>
+
+    <script>
+      var carName1 = "Volvo XC60";
+      var carName2 = "Volvo XC60";
+
+      document.getElementById("demo").innerHTML = carName1 + " " + carName2;
+    </script>
+
+    <!-- Show some string examples. -->
+    <!-- 문자열이 문자열을 둘러싼 따옴표와 일치하지 않는 한 문자열 내부에서 따옴표를 사용할 수 있습니다. -->
+    <p id="demo"></p>
+
+    <script>
+      let answer1 = "It's alright";
+      let answer2 = "He is called 'Johnny'";
+      let answer3 = 'He is called "Johnny"';
+
+      document.getElementById("demo").innerHTML = answer1 + "<br>" + answer2 + "<br>" + answer3;
+    </script>
+
+    <!-- Backslash before quotes accepts quotes as quotes. -->
+    <!-- 따옴표로 따옴표를 사용하기 전에 백슬래시합니다. -->
+    <p id="demo"></p>
+
+    <script>
+      var x = "It's alright";
+      var y = 'We are the so-called "Vikings" from the north.';
+
+      document.getElementById("demo").innerHTML = x + "<br>" + y;
+    </script>
+
+    <!-- Find the length of a string. -->
+    <!-- 문자열의 길이를 찾습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      document.getElementById("demo").innerHTML = text.length;
+    </script>
+
+    <!-- You can break text string with a backslash. -->
+    <!-- 백슬래시로 텍스트 문자열을 분할할 수 있습니다. -->
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "Hello \ Dolly!";
+    </script>
+
+    <!-- You cannot break code with a backslash. -->
+    <!-- 코드 라인은 \ 백슬래시로 분할할 수 없습니다. -->
+    <p id="demo">You cannot brack a code line with a \ backslash</p>
+
+    <script>
+      document.getElementById("demo").innerHTML = \ "Hello Dolly.";
+    </script>
+
+    <!-- Find the position of the first occurrence of a text in a string - indexOf() -->
+    <!-- 문자열에서 텍스트의 첫 번째 발생 위치 찾기 - indexOf() -->
+    <p id="demo"></p>
+
+    <script>
+      let text = "Please locate where 'locate' occurs!";
+      let index = text.indexOf("locate");
+
+      document.getElementById("demo").innerHTML = index;
+    </script>
+
+    <!-- Search for a text in a string and return the text if found - match() -->
+    <!-- 문자열에서 텍스트를 검색하고 찾은 경우 텍스트를 반환합니다 - match() -->
+    <p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        var str = "The rain in SPAIN stays mainly in the plain";
+        var res = str.match(/ain/g);
+
+        document.getElementById("demo").innerHTML = res;
+      }
+    </script>
+
+    <!-- Replace characters in a string - replace() -->
+    <!-- 문자열의 문자 바꾸기 - 바꾸기() -->
+    <p id="demo">Please visit Microsoft!</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        let text = document.getElementById("demo").innerHTML;
+
+        document.getElementById("demo").innerHTML = text.replace("Microsoft", "W3Schools");
+      }
+    </script>
+
+    <!-- Convert string to upper case - toUppercase() -->
+    <!-- 문자열을 대문자로 변환 - 대문자()로 변환 -->
+    <p id="demo">Hello World!</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        let text = document.getElementById("demo").innerHTML;
+
+        document.getElementById("demo").innerHTML = text.toUpperCase();
+      }
+    </script>
+
+    <!-- Convert string to lower case - toLowercase() -->
+    <!-- 문자열을 소문자로 변환 - 소문자()로 변환 -->
+    <p id="demo">Hello World!</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        let text = document.getElementById("demo").innerHTML;
+
+        document.getElementById("demo").innerHTML = text.toLowerCase();
+      }
+    </script>
+
+    <!-- split a string into an array - split() -->
+    <!-- 끈을 하나의 배열로 쪼개다 -->
+    <p id="demo"></p>
+
+    <script>
+      let text = "a, b, c, d, e";
+      const myArray = text.split(",");
+
+      document.getElementById("demo").innerHTML = myArray[0];
+    </script>
+  </body>
+</html>
