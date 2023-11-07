@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Numbers</title>
+  </head>
+  <body>
+    <!-- Numbers can be written with or without decimals -->
+    <!-- 숫자는 소수점을 사용하거나 사용하지 않고 작성할 수 있습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 3.14;
+      let y = 3;
+
+      document.getElementById("demo").innerHTML = x + "<br>" + y;
+    </script>
+
+    <!-- Extra large or extra small numbers can be written with exponent notation -->
+    <!-- 지수 표기를 사용하여 특대수 또는 특소수를 작성할 수 있습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 123e5;
+      let y = 123e-5;
+
+      document.getElementById("demo").innerHTML = x + "<br>" + y;
+    </script>
+
+    <!-- Number are considered accurate only up to 15 digits -->
+    <!-- 숫자는 15자리까지만 정확한 것으로 간주됩니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 999999999999999;
+      let y = 9999999999999999;
+
+      document.getElementById("demo").innerHTML = x + "<br>" + y;
+    </script>
+
+    <!-- Floating point arithmetic is not always 100% accurate -->
+    <!-- 부동 소수점 연산이 항상 100% 정확한 것은 아니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 0.2 + 0.1;
+
+      document.getElementById("demo").innerHTML = "0.2 + 0.1 = " + x;
+    </script>
+
+    <!-- But it helps to multiply and divide by 10 -->
+    <!-- 하지만 10을 곱하고 나누는 것은 도움이 된다 -->
+    <p id="demo01"></p>
+    <p id="demo02"></p>
+
+    <script>
+      let x = 0.2 + 0.1;
+      document.getElementById("demo01").innerHTML = x;
+
+      let y = (0.2 * 10 + 0.1 * 10) / 10;
+      document.getElementById("demo02").innerHTML = y;
+    </script>
+
+    <!-- Adding two numbers results in a new number -->
+    <!-- 두개의 숫자를 더하면 새로운 숫자가 나온다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x  = 10;
+      let y = 20;
+      let z = x + y;
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- Adding two numeric strings results in a concatenated string -->
+    <!-- 숫자 문자열 두 개를 추가하면 연결된 문자열이 생성됩니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "10";
+      let y = "20";
+      let z = x + y;
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- Adding a number and a numeric string also results in a concatenated string -->
+    <!-- 숫자와 숫자 문자열을 추가하면 연결된 문자열이 생성됩니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 10;
+      let y = "20";
+      let z = x + y;
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- Adding a numeric string and number also results in a concatenated string -->
+    <!-- 숫자 문자열과 숫자를 추가하면 연결된 문자열이 생성됩니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "10";
+      let y = 20;
+      let z = x + y;
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- Common mistake when adding strings and numbers 1 -->
+    <!-- 문자열과 숫자 1을 추가할 때 흔히 발생하는 실수 -->
+    <p id="demo"></p>
+
+    <script>
+      var x = 10;
+      var y = 20;
+
+      document.getElementById("demo").innerHTML = "The result is : " + x + y;
+    </script>
+
+    <!-- Common mistake when adding strings and numbers 2 -->
+    <!-- 문자열과 숫자 2를 추가할 때 흔히 발생하는 실수 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 10;
+      let y = 20;
+      let z = "30";
+      let result = x + y + z;
+
+      document.getElementById("demo").innerHTML = result
+    </script>
+
+    <!-- Javascript will try to convert strings to numbers when dividing -->
+    <!-- 자바스크립트는 나뉠 때 문자열을 숫자로 변환하려고 할 것이다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "100";
+      let y = "10";
+      let z =  x / y;
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- Javascript will try to convert strings to numbers when multiplying -->
+    <!-- 자바스크립트는 곱셈을 할 때 문자열을 숫자로 변환하려고 할 것이다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "100";
+      let y = "10";
+      let z = x * y;
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- Javascript will try to convert strings to numbers when subtracting -->
+    <!-- 자바스크립트는 뺄셈을 할 때 문자열을 숫자로 변환하려고 할 것이다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "100";
+      let y = "10";
+      let z = x - y;
+
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- Javascript will NOT convert strings to numbers when adding -->
+    <!-- 자바스크립트는 추가할 때 문자열을 숫자로 변환하지 않는다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = "100";
+      let y = "10";
+      let z = x + y;
+      
+      document.getElementById("demo").innerHTML = z;
+    </script>
+
+    <!-- A number divided by a string is NaN (Not a Number) -->
+    <!-- 문자열로 나눈 숫자는 NaN(Not a Number)입니다 -->
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = 100 / "Apple";
+    </script>
+
+    <!-- A number divided by a numeric string is a number -->
+    <!-- 숫자열로 나누어진 숫자는 숫자이다 -->
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = 100 / "10";
+    </script>
+
+    <!-- The global JavaScript function isNaN() returns if a value is a number -->
+    <!-- 글로벌 자바스크립트 함수 isNaN()을 사용하여 값이 숫자가 아닌지 확인할 수 있습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 100 / "Apple";
+      document.getElementById("demo").innerHTML = isNaN(x);
+    </script>
+
+    <!-- Using NaN in a mathematical operation will always return NaN -->
+    <!-- 수학적 연산에서 NaN을 사용하면 항상 NaN이 반환됩니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = NaN;
+      let y = 5;
+
+      document.getElementById("demo").innerHTML = x + y;
+    </script>
+
+    <!-- Using NaN in a mathematical string operation will concatenate NaN -->
+    <!-- 수학적 문자열 연산에서 NaN을 사용하면 NaN이 연결된다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = NaN;
+      let y = "5";
+
+      document.getElementById("demo").innerHTML = x + y;
+    </script>
+
+    <!-- NaN (Not a Number) is a number (Yes! typeof NaN returns number) -->
+    <!-- NaN(숫자 아님)은 숫자입니다(예! NaN 반환 번호 유형) -->
+    <p id="demo"></p>
+
+    <script>
+      let x = NaN;
+
+      document.getElementById("demo").innerHTML = typeof x;
+    </script>
+
+    <!-- Infinity is returned if you calculate a number outside the largest possible number -->
+    <!-- 가능한 가장 큰 숫자를 벗어난 숫자를 계산하면 인피니티가 반환됩니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let myNumber = 2;
+      let txt = "";
+
+      while(myNumber != Infinity){
+        myNumber = myNumber * myNumber;
+        txt += myNumber + "<br>"
+      }
+
+      document.getElementById("demo").innerHTML = txt;
+    </script>
+
+    <!-- Division by zero also generates Infinity -->
+    <!-- 0으로 나누면 인피니티도 생성된다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 2 / 0;
+      let y = -2 / 0;
+
+      document.getElementById("demo").innerHTML = x + "<br>" + y;
+    </script>
+
+    <!-- Infinity is a number (typeof Infinity returns number) -->
+    <!-- Infinity는 숫자(Infinity returns number의 유형)입니다 -->
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = typeof Infinity;
+    </script>
+
+    <!-- Constants, preceded by 0x, are interpreted as hexadecimal -->
+    <!-- 0x 앞에 오는 상수는 16진수로 해석됩니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 0xFF;
+      
+      document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <!-- The toString() method con output numbers as hex, octal, and binary -->
+    <!-- toString() 메서드는 숫자를 16진수, 8진수 및 2진수로 출력합니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let myNumber = 32;
+
+      document.getElementById("demo").innerHTML = "Decimal 32 = " + "<br><br>" +
+
+      "Hexatrigesimal (base 36): " + myNumber.toString(36) + "<br>" +
+      "Duotrigesimal (base 32): " + myNumber.toString(32) + "<br>" +
+      "Hexadecimal (base 16): " + myNumber.toString(16) + "<br>" +
+      "Duodecimal (base 12): " + myNumber.toString(12) + "<br>" +
+      "Decimal (base 10): " + myNumber.toString(10) + "<br>" +
+      "Octal (base 8): " + myNumber.toString(8) + "<br>" +
+      "Binary (base 2): " + myNumber.toString(2);
+    </script>
+    
+    <!-- Numbers can be objects -->
+    <!-- 숫자는 개체일 수 있습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x  = 123;
+      let y = new Number(123);
+
+      document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+    </script>
+
+    <!-- Numbers and objects cannot be safely compared -->
+    <!-- 숫자와 개체를 안전하게 비교할 수 없습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = 500;
+      let y = new Number(500);
+
+      document.getElementById("demo").innerHTML = (x === y);
+    </script>
+
+    <!-- Objects and objects cannot be safely compared -->
+    <!-- 개체와 개체를 안전하게 비교할 수 없습니다 -->
+    <p id="demo"></p>
+
+    <script>
+      let x = new Number(500);
+      let y = new Number(500);
+
+      document.getElementById("demo").innerHTML = (x == y);
+    </script>
+  </body>
+</html>
